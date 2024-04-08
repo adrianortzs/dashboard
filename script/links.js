@@ -4,7 +4,6 @@ const section = document.querySelector("section")
 let contador = 0
 
 document.addEventListener("DOMContentLoaded", () => {
-    
 })
 
 botonAñadir.addEventListener("click", (event) => {
@@ -23,4 +22,14 @@ botonAñadir.addEventListener("click", (event) => {
     <li>${link}</li>
     <li><button class="borrar-link">Borrar</button></li>
     </ul>`
+
+    if (link === "" && nombreGuardado === ""){
+        console.log("Rellena todos los campos")
+    }
+
+    // const botonBorrar = document.getElementsByClassName("borrar-link")
+    
+    // botonBorrar.addEventListener("click", () => {
+    //     section.innerHTML = ""
+    // })
 })
