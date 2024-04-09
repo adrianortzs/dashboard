@@ -1,0 +1,23 @@
+div {
+    display: flex;
+    flex-direction: column;
+    gap: 5.25rem;
+    align-items: center;
+    background-color: lightgray;
+    border: 5px solid black;
+    margin: 150px 150px 0px 150px;
+}
+
+#reloj-digital {
+    margin-top: 55px;
+    font-size: 90px;
+    background-color: white;
+    border: 5px solid black;
+}
+
+#frase {
+    margin-bottom: 55px;
+    font-size: 38px;
+    color: black;
+    font-weight: bold;
+}
