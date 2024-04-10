@@ -7,7 +7,6 @@ const caracteres = mayusculas.concat(minusculas,numeros,simbolos)
 
 const botonGenerar = document.querySelector("button")
 
-
 botonGenerar.addEventListener("click", (event) => {
     event.preventDefault()
     
@@ -22,33 +21,31 @@ botonGenerar.addEventListener("click", (event) => {
     }
 })
 
-
-function contieneCaracter(contraseña, tipoCaracter) {
-    return tipoCaracter.some(caracter => contraseña.includes(caracter))
-}
-
-
 function generarContraseña(longitud) {
     let contraseña = ""
-
+    
     contraseña += mayusculas[Math.floor(Math.random() * mayusculas.length)]
     contraseña += minusculas[Math.floor(Math.random() * minusculas.length)]
     contraseña += numeros[Math.floor(Math.random() * numeros.length)]
     contraseña += simbolos[Math.floor(Math.random() * simbolos.length)]
-
+    
     for (let i = 4; i < longitud; i++) {
         const caracterAleatorio = caracteres[Math.floor(Math.random() * caracteres.length)]
         contraseña += caracterAleatorio
     }
-
+    
     const contieneMayuscula = contieneCaracter(contraseña, mayusculas)
     const contieneMinuscula = contieneCaracter(contraseña, minusculas)
     const contieneNumero = contieneCaracter(contraseña, numeros)
     const contieneSimbolo = contieneCaracter(contraseña, simbolos)
-
+    
     if (!contieneMayuscula || !contieneMinuscula || !contieneNumero || !contieneSimbolo){
         return generarContraseña(longitud)
     }
-
+    
     return contraseña
+}
+
+function contieneCaracter(contraseña, tipoCaracter) {
+    return tipoCaracter.some(caracter => contraseña.includes(caracter))
 }
