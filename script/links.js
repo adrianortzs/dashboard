@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const botonAñadir = document.querySelector("button")
+    const botonAñadir = document.getElementById("boton-añadir")
     const section = document.querySelector("section")
     
     let contador = 0
@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault()
         contador ++
         
-        const link = document.getElementById("link").value
-        const nombreGuardado = document.getElementById("nombre-guardado").value
-        const valores = {nombre: nombreGuardado, link: link}
+        const enlace = document.getElementById("enlace").value
+        const nombreEnlace = document.getElementById("nombre-enlace").value
+        const valores = {nombre: nombreEnlace, link: enlace}
 
-        if (link !== "" && nombreGuardado !== "") {
+        if (enlace !== "" && nombreEnlace !== "") {
             localStorage.setItem(`Link ${contador}`, JSON.stringify(valores))
-            añadirLinks(nombreGuardado, link)
+            añadirLinks(nombreEnlace, enlace)
         } else {
             alert("Rellena todos los campos")
         }
@@ -35,11 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
        lista.innerHTML += `
         <li>${nombre}</li>
         <li><a href="${link}" target="_blank">${link}</a></li>
-        <li><button class="borrar-link">Borrar</button></li>`
+        <li><button class="boton-borrar">Borrar</button></li>`
 
         section.appendChild(lista) 
 
-        const botonBorrar = lista.querySelector(".borrar-link")
+        const botonBorrar = lista.querySelector(".boton-borrar")
 
         botonBorrar.addEventListener("click", function() {
             lista.remove()

@@ -10,7 +10,7 @@ const botonGenerar = document.querySelector("button")
 botonGenerar.addEventListener("click", (event) => {
     event.preventDefault()
     
-    const longitudContraseña = document.getElementById("length").value
+    const longitudContraseña = document.getElementById("tamaño").value
     const section = document.querySelector("section")
 
     if (longitudContraseña >= 12 && longitudContraseña <= 50) {

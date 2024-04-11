@@ -1,23 +1,56 @@
+body {
+    background-color: darkgrey;
+}
+
 div {
     display: flex;
     flex-direction: column;
-    gap: 5.25rem;
+    gap: 1.5rem;
     align-items: center;
     background-color: lightgray;
-    border: 5px solid black;
-    margin: 150px 150px 0px 150px;
+    width: fit-content;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    margin-left: 39%;
+    margin-top: 10%;
+    margin-bottom: 150px;
+}
+
+header {
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+header > span, footer > span {
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 2.5rem;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #reloj-digital {
-    margin-top: 55px;
-    font-size: 90px;
-    background-color: white;
-    border: 5px solid black;
+    font-size: 35px;
+    padding-top: 15px;
+    color: white;
 }
 
 #frase {
-    margin-bottom: 55px;
-    font-size: 38px;
-    color: black;
-    font-weight: bold;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    color: white;
 }

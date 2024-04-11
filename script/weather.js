@@ -26,8 +26,6 @@ async function fetchUbicacion() {
             }
         })
 
-        console.log(prevision)
-
         const datosCiudad = {
                 ciudad: data.location.region,
                 pais: data.location.country
@@ -51,7 +49,7 @@ async function fetchUbicacion() {
         otrosDatos.innerHTML = `<span>${datosTiempo.precipitaciones}</span><span>${datosTiempo.humedad}</span><span>${datosTiempo.velocidadViento}</span>`
 
         prevision.forEach(hour => {
-            sectionPrevisiones.innerHTML += `<span>${hour.hora}</span><img src=${hour.imagen}><span>${hour.grados}</span>`
+            sectionPrevisiones.innerHTML += `<div class="prevision"><span>${hour.hora}</span><img src=${hour.imagen}><span>${hour.grados}°</span><div>`
         })
 
     }

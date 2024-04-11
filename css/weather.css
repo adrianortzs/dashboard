@@ -1,0 +1,54 @@
+body {
+    background-color: darkgray;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    margin: 150px 150px 0px 150px;
+    font-size: 30px;
+}
+
+header {
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+header > span, footer > span {
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 2.5rem;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#ciudad-pais {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    
+}
+
+#previsiones {
+    display: flex;
+    flex-direction: column;
+}
+
+.prevision {
+    display: flex;
+    flex-direction: row;
+}
