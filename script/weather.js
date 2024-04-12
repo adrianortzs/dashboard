@@ -7,9 +7,18 @@ const grados = document.getElementById("grados")
 const otrosDatos = document.getElementById("otros-datos")
 const sectionPrevisiones = document.getElementById("previsiones")
 
+const imagenes = ["../assets/agua.avif", "../assets/cielo.avif", "../assets/desierto.avif", "../assets/hurcan.avif", "../assets/lluvia.avif", "../assets/niebla.avif", "../assets/nubes.avif", "../assets/playa.avif", "../assets/prado.avif", "../assets/rayos.avif"]
+
+function imagenFondoRandom() {
+    const aleatoria = Math.floor(Math.random() * imagenes.length)
+    document.body.style.backgroundImage = `url(${imagenes[aleatoria]})`
+}
+
+setInterval(imagenFondoRandom, 15000)
+
 document.addEventListener("DOMContentLoaded", () => {
     fetchUbicacion()
-    
+    imagenFondoRandom()
 })
 
 async function fetchUbicacion() {
@@ -40,13 +49,13 @@ async function fetchUbicacion() {
                 velocidadViento: data.current.wind_kph
             }
 
-        ciudadYpais.innerHTML = `<span>${datosCiudad.ciudad}</span><span>${datosCiudad.pais}</span>`
+        ciudadYpais.innerHTML = `<span>${datosCiudad.ciudad}/${datosCiudad.pais}</span>`
 
         clima.textContent = datosTiempo.estado
 
         grados.innerHTML = `<img src=${datosTiempo.imagenEstado} alt=${datosTiempo.estado}><span>${datosTiempo.grados}</span>`
 
-        otrosDatos.innerHTML = `<span>${datosTiempo.precipitaciones}</span><span>${datosTiempo.humedad}</span><span>${datosTiempo.velocidadViento}</span>`
+        otrosDatos.innerHTML = `<span>Precipitaciones: ${datosTiempo.precipitaciones}%</span><span>Humedad: ${datosTiempo.humedad}%</span><span>Viento: ${datosTiempo.velocidadViento} Km/h<span>`
 
         prevision.forEach(hour => {
             sectionPrevisiones.innerHTML += `<div class="prevision"><span>${hour.hora}</span><img src=${hour.imagen}><span>${hour.grados}°</span><div>`

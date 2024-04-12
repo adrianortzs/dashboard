@@ -1,10 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     const botonAñadir = document.getElementById("boton-añadir")
     const section = document.querySelector("section")
-    
-    let contador = 0
 
+    let contador = 0
+    
     cargarLocalStorage()
+    
+    const imagenes = ["../assets/agua.avif", "../assets/cielo.avif", "../assets/desierto.avif", "../assets/hurcan.avif", "../assets/lluvia.avif", "../assets/niebla.avif", "../assets/nubes.avif", "../assets/playa.avif", "../assets/prado.avif", "../assets/rayos.avif"]
+
+    imagenFondoRandom()
+
+    function imagenFondoRandom() {
+        const aleatoria = Math.floor(Math.random() * imagenes.length)
+        document.body.style.backgroundImage = `url(${imagenes[aleatoria]})`
+    }
+
+    setInterval(imagenFondoRandom, 15000)
 
     botonAñadir.addEventListener("click", (event) => {
         event.preventDefault()
