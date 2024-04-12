@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+#dashboard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+header {
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+header > a , footer > a {
+    cursor: pointer;
+    color: white;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 2.5rem;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

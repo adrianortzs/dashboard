@@ -8,7 +8,7 @@ div {
     border: 1px solid lightgray;
     border-radius: 6px;
     margin-left: 39%;
-    margin-top: 10%;
+    margin-top: 15%;
     margin-bottom: 150px;
 }
 
@@ -22,19 +22,9 @@ header {
     color: white;
 }
 
-header > span, footer > span {
+header > a {
     cursor: pointer;
-}
-
-footer {
-    display: flex;
-    flex-direction: row;
     color: white;
-    gap: 2.5rem;
-    font-size: 30px;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 #reloj-digital {

@@ -8,22 +8,12 @@ header {
     color: white;
 }
 
-header > span, footer > span {
+header > a {
     cursor: pointer;
-}
-
-footer {
-    display: flex;
-    flex-direction: row;
     color: white;
-    gap: 2.5rem;
-    font-size: 30px;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
- form {
+form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -31,10 +21,11 @@ footer {
     text-align: center;
     width: 33%;
     margin-left: 33%;
+    padding-top: 40px;
     color: white;
 } 
 
- #enlace, #nombre-enlace {
+#enlace, #nombre-enlace {
     text-align: center;
     font-size: 20px;
     border-radius: 6px;
