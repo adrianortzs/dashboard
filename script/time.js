@@ -1,7 +1,7 @@
 const relojDigital = document.getElementById("reloj-digital")
 const frase = document.getElementById("frase")
 
-const imagenes = ["../assets/agua.avif", "../assets/cielo.avif", "../assets/desierto.avif", "../assets/hurcan.avif", "../assets/lluvia.avif", "../assets/niebla.avif", "../assets/nubes.avif", "../assets/playa.avif", "../assets/prado.avif", "../assets/rayos.avif"]
+const imagenes = ["../assets/agua.avif", "../assets/arboles.avif", "../assets/desierto.avif", "../assets/colores.avif", "../assets/lluvia.avif", "../assets/niebla.avif", "../assets/nubes.avif", "../assets/puesta.avif", "../assets/vistas.avif", "../assets/rayos.avif"]
 
 function imagenFondoRandom() {
     const aleatoria = Math.floor(Math.random() * imagenes.length)
