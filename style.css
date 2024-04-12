@@ -1,7 +1,7 @@
 h1 {
     text-align: center;
     font-size: 40px;
-    color: white;
+    color: black;
 }
 
 #dashboard {
@@ -21,18 +21,18 @@ header {
     padding-bottom: 20px;
     padding-left: 20px;
     font-size: 30px;
-    color: black;
+    color: white;
 }
 
 header > a , footer > a {
     cursor: pointer;
-    color: black;
+    color: white;
 }
 
 footer {
     display: flex;
     flex-direction: row;
-    color: black;
+    color: white;
     gap: 2.5rem;
     font-size: 30px;
     padding-left: 20px;
